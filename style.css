@@ -1,1 +1,49 @@
-
+body {
+  padding: 2rem;
+}
+h1 {
+  margin: 0;
+  text-align: center;
+  color: red;
+}
+.online {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+.offline {
+  background-color: rgba(255, 0, 0, 0.25);
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card {
+  border: darkblue solid 1px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  box-shadow: gray 5px 5px 0 0;
+}
+.card-header {
+  text-align: right;
+  color: darkblue;
+  font-size: 1.25rem;
+}
+.card-header > h4 {
+  margin: 0.25rem 0;
+}
+.card-body {
+  text-align: justify;
+  font-size: 0.75rem;
+}
+.card-footer {
+  text-align: right;
+  font-size: 0.5rem;
+  font-style: italic;
+}
+/*# sourceMappingURL=style.css.map */

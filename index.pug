@@ -12,7 +12,7 @@ mixin card(user)
   div.card-body
     p= `${user.last_name} ${user.first_name}`
   footer.card-footer
-    p= user.email
+    a(href=`mailto:${user.email}`)= user.email
 
 doctype html
 html(lang="en")

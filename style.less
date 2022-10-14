@@ -1,0 +1,55 @@
+@import "variables";
+
+body {
+  padding: 2rem;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  color: @color-header;
+}
+
+.online {
+  background-color: @color-online;
+}
+.offline {
+  background-color: @color-offline;
+}
+
+main {
+  .create_flex(row);
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  border: @color-card_border solid 1px;
+  .padding_margin(0.5rem);
+  flex: 1 1 auto;
+
+  .create_flex(column);
+
+  &:hover {
+    box-shadow: gray 5px 5px 0 0;
+  }
+
+  &-header {
+    text-align: right;
+    color: darkblue;
+    font-size: 1.25rem;
+
+    & > h4 {
+      margin: 0.25rem 0;
+    }
+  }
+  &-body {
+    text-align: justify;
+    font-size: 0.75rem;
+  }
+  &-footer {
+    text-align: right;
+    font-size: 0.5rem;
+    font-style: italic;
+  }
+}
