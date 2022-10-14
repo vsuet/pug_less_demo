@@ -1,33 +1,33 @@
 -
-    var users = [
+  var users = [
     {id: 1, first_name: 'User 1', last_name: 'Users', email: "user1@users.u", online: true},
     {id: 2, first_name: 'User 2', last_name: 'Users', email: "user2@users.u", online: false},
     {id: 3, first_name: 'User 3', last_name: 'Users', email: "user3@users.u", online: true},
     {id: 4, first_name: 'User 4', last_name: 'Users', email: "user4@users.u", online: true}
-    ]
+  ]
 
 mixin card(user)
-    header.card-header
-        h4= user.id
-    div.card-body
-        p= `${user.last_name} ${user.first_name}`
-    footer.card-footer
-        p= user.email
+  header.card-header
+    h4= user.id
+  div.card-body
+    p= `${user.last_name} ${user.first_name}`
+  footer.card-footer
+    p= user.email
 
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        title Pug demo
-    body
-        header
-            h1 Pug demo
-        hr
-        main
-            each user in users
-                if user.online
-                    section.card.online
-                        +card(user)
-                else
-                    section.card.offline
-                        +card(user)
+  head
+    meta(charset="UTF-8")
+    title Pug demo
+  body
+    header
+      h1 Pug demo
+    hr
+    main
+      each user in users
+        if user.online
+          section.card.online
+            +card(user)
+        else
+          section.card.offline
+            +card(user)
